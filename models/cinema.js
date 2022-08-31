@@ -23,5 +23,11 @@ Cinema.prototype.getFilmByTitle = function(title){
   return filmsOfTitle
 };
 
+Cinema.prototype.filmsMadeThatYear = function(date){
+  let filmsOfYear = this.films.some((film) => {
+    return film.year === date
+  });
+  return filmsOfYear
+};
 
 module.exports = Cinema;
